@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+
+class Pet 
+{
+protected:
+    string name;
+
+public:
+    Pet(const string& petname) : name { petname } {} 
+
+    void info() const
+    {
+        cout << "Name: " << name;
+    }
+};
+
+class Dog : public Pet 
+{
+
+public:
+    Dog(string& petname) : Pet{ petname } {}
+};
+
+class Cat : public Pet 
+{ 
+public:
+    Cat(const string& petName) : Pet{petName} {} 
+};
+
+class Parrot : public Pet
+{
+public:
+    Parrot(const string& petName) : Pet{petName} {}
+};
